@@ -1,0 +1,230 @@
+react-frontend Technology
+-----------------------
+to create UI
+UI-User Interface
+-------------
+the point where thw user-computer(software) interaction?communication take place
+
+-react make use of js libraries to create UI
+
+-libraries: predefined code -- to do particular task
+-framework :predined code -- highly restricted
+
+-refer libraries vs framework
+
+features of react
+-------------------
+1) to create UI
+2)single page application:-web application or website that interact with the user by dynamically current webpage with new data from the webserver,instead of the default method of loading all the pages separately.
+
+3)Declarative application:- doesnot access directly DOM
+
+4)VIRTUAL DOM:- vitrual dom is created by react
+  diffing: process of comparing virtual dom with real dom
+  Reconciliation: process of updating real dom
+5)immutable variable:- cannot change value
+6) pure fn:- fns that ascepts immutable  variables and return an objects- result only depend on the variable
+eg:react components
+7)data sharing:- unidirection- parent-child
+8)language:- JSX --  Javascript XML(combination of js,html,css)
+     -jsx expression must be inside  a single parent element(tag)
+     - empty tag : react fragment
+     -jscode-jsx-{}
+
+9) Transpiling:-process of converting JXS into browser understanding(html,css,js) language
+               -BABEL -convert
+
+how to create a react project
+------------------------------
+npm i -g npm  : node globLlisation
+1)0 npx create-react-app project_name
+       npx-node package execute - execute
+       npm-node package manager - install
+
+       create form in the name of project
+       ----------------------------
+2) change directory-cd project_name
+3)  npm start
+
+
+files
+-----
+1)readme : holds description of the react application
+2)package.json : holds nom configuration
+   -dependencies: installed libraries
+3)package-lock.json : holds versions of installed libraries
+4).gitognore : holds  files that neednot to be pushed into gitognore
+        -git:- tool of github
+5)node modules : its a copy of installed libraries
+   npm install
+6)public : holds those files which can be throughout the project
+7)index.html : is the only page that run in the browser
+  meta:-
+8) reportWebVital : use to make performance of react application
+
+
+components
+------------
+-basic unit of react application
+-should start with capital letter
+-in order use componentsin other files 
+      1)export- export default componentname
+      2)import-import variable from url
+      3)self closing tag- <componentname/>
+
+d/f types of components
+
+1)functional components / stateless component
+-------------------------
+-name should start with capitalletter
+eg:-app.js
+syntax:-
+
+function componentname(){
+  //jscode
+  return(
+    //jsxcode
+  )
+}
+export default componentname
+
+2) class componentname / stateful components
+---------------------
+-name should start with capitalletter
+syntax:-
+
+class ClassName extends React.Component {
+       //jscode
+      render(){
+        return(
+            //jsx code
+            <div></div>
+        )
+       }
+}
+export default componentname; 
+
+
+
+how data sharing happens in react components
+--------------------------------------------
+-unidirection:- parent to child
+
+-props -objects(key:vlue)
+
+
+object destructuring
+--------------------
+child(props)
+child({key})
+
+how to style react component using css
+---------------------------------------
+1)Inline
+2)External
+-----------------
+1)Inline-
+---------
+style={{key:value}}
+
+
+2)External
+-------------
+-external file-exe -filename.css
+-import-syntax-import 'url'
+
+3)css modules
+-------------
+exe-filename.module.css
+-can store into a variable and can style using this variable 
+-can create only in src folder
+-global access
+
+React even handling
+------------------------
+html-onclick=""
+jsx-onClick={}
+functionwithout argument--- syntax--onClick={functionName}
+
+function with argument---syntax--onClick={()=>functionName(arg)}
+
+
+how to get value from input box
+-------------------------------
+html--inputid.value
+in jsx
+--------
+onChange(callback)--call cheyyanm
+
+conditional rendering
+----------------
+rendering-- loading to browser
+
+1)if - truthy operator--&&
+2)if else -ternary--?:
+
+react state
+-----------
+state is an object which store properties of a react class components
+-when the state is changes component is re-render
+
+-setstate()-- change the value of a state
+
+life cycle of a react class components
+-------
+1) mountine phase : component add to dom
+    - constructors():- initialise state
+    -getDerivedStateFromProps():- modify the state value with props
+    -render() :- load to DOM
+    -componentDidMount():- network request
+   
+2) updating phase : editing of component
+          -getDerivedStateFromProps()- modify the state value with props
+          -shouldComponentUpdate():-true or false
+          -render() :-load to DOM
+          -getSnapShotBeforeUpdate() :- give access to previous state before update
+          -compountDidUpdate() :-last method
+3) unmounting phase : removal of components from dom
+      -componentWillUmount() :- invoked just befor the umount  to cancel if there any network is done etc.....
+      inshot it cleanup the component before it is removed from the DOM
+
+
+      Hooks
+      -----
+      hooks 
+      - predefined function
+      -to provide state and life cycle to functional components.
+
+
+      rules
+      -------
+      1)import  hooks from react library to react functional component.
+      2) can call hook only aat the top section of them functional component.
+      3)cannot use hooks on conditional base.
+
+      hooks are d/f types
+      -------------
+      1)predefined hooks                                         
+      eg:- useState
+useState
+---------
+-to create state in functional components
+-returns :- state and function which can change the state 
+-can store - string,number,objects,array....
+
+      2) customs  hooks
+      
+
+react form
+--------
+regular expression :- to check the pattern of the given string
+certain rules to create  regular expression
+1)should startt and end with forward slash
+2)expression begins with ^ (rise)
+3)expressions should ends with $(dollar)
+  eg:-/^[0-9]+$/
+
+
+  match(): if the pattern matches with the given string it return array else null
+
+  !! :- to convert into boolean value
