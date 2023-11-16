@@ -7,10 +7,10 @@ import { addCategory, deleteCategory, getAllCategory, updatecategory, videoPass 
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-/* import { Col, Row } from 'react-bootstrap';
+/* import { Col, Row } from 'react-bootstrap';*/
 import Videocard from './Videocard';
 
- */
+ 
 
 function Category1() {
 
