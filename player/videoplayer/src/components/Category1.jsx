@@ -7,10 +7,10 @@ import { addCategory, deleteCategory, getAllCategory, updatecategory, videoPass 
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Col, Row } from 'react-bootstrap';
+/* import { Col, Row } from 'react-bootstrap';
 import Videocard from './Videocard';
 
-
+ */
 
 function Category1() {
 
@@ -113,17 +113,7 @@ useEffect(()=>{
         <h6>{item.categoryName}</h6>
         <button onClick={()=>removeCategory(item?.id)} className='btn btn-danger'><i class="fa-solid fa-trash"></i></button>
       </div>
-      <Row>
-      <Col>
-      {
-      item?.allvideos.length>0?
-      item?.allvideos.map((card)=>( <Videocard displayVideo={card}/>))
-            :<p /* className='fw-bolder fs-5 m-3 text-danger' */>Nothing to display</p>
-
-           }
-      </Col>
-    </Row>
-
+     
     </div>))
       :
     <p className='fw-bolder fs-5 m-3 text-danger'>Nothing to display</p>

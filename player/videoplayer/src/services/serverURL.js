@@ -1,1 +1,1 @@
-export const serverURL="http://localhost:7000"
+export const serverURL="https://backendmedia-hs97.onrender.com"
